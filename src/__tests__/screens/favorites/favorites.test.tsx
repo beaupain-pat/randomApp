@@ -19,6 +19,7 @@ const MOCK_ACTIVITY = {
 }
 
 const middlewares = [thunk];
+// @ts-ignore
 const mockStore = configureMockStore(middlewares);
 describe('favorite screen test', () => {
     it('should render the favorite screen without favorites', () => {
