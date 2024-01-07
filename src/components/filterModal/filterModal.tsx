@@ -74,8 +74,12 @@ const FilterModal = ({modalVisible}: FilterModalProps) => {
                     ))}
                 </View>
                 <View style={styles.modalActions}>
-                    <Button testID="apply-button" title="Apply" onPress={() => fetchAndToggle()}/>
-                    <Button testID="clear-button" title="Clear" onPress={() => clearAndToggle()}/>
+                    <View style={styles.button}>
+                        <Button testID="apply-button" title="Apply" onPress={() => fetchAndToggle()}/>
+                    </View>
+                    <View style={styles.button}>
+                        <Button testID="clear-button" title="Clear" onPress={() => clearAndToggle()}/>
+                    </View>
                 </View>
             </SafeAreaView>
         </Modal>
@@ -100,7 +104,11 @@ const styles = StyleSheet.create({
         paddingHorizontal: 30
     },
     modalActions: {
-        marginVertical: 10, paddingHorizontal: 30
+        marginVertical: 10,
+        paddingHorizontal: 30,
+    },
+    button: {
+        marginVertical: 5,
     }
 });
 
